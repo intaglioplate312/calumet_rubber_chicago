@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- End of XHTML Document Information -->
+
+<!-- XHTML Header Information -->
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+	<meta name="ROBOTS" content="ALL" />
+	<meta name="Copyright" content="(c) 2005 Copyright John Maenpaa" />
+	<!-- (c) Copyright 2005 by John Maenpaa All Rights Reserved. -->
+	
+	<meta name="Keywords" content="rubber chicken fingers" />
+	<!-- meta name="Description" content="__DESCRIPTION__" / -->
+
+    <!-- Window Title -->
+    <title><%=h @my_organization.name %></title>
+
+    <!-- CSS Stylesheets -->
+    <%= stylesheet_link_tag 'basic1' %>
+    
+    <!-- Javascript includes -->
+    <!-- %= javascript_include_tag :defaults % -->
+</head>
+
+<!-- XHTML Body Begins -->
+<body>
+    <!-- Page Heading -->
+    <div id="header">
+        <div class="siteTitle"><%=@my_organization.name %></div>
+    </div>
+    
+    <div id="contentarea">
+
+        <div id="column1">
+            <!-- This is the content on the left of the page. -->
+        </div>
+    
+        <div id="column2">
+
+            <% if @pageTitle %>
+                <div id="pageTitle">
+                    <%=h @pageTitle %>
+                </div>
+            <% end %>
+
+            <!-- Information and Error Notices -->
+            <div class="notice">
+                <p><%= flash[:notice] %></p>
+            </div>
+            
+            <!-- Page Body (View Templates Used Here) -->
+            <%= @content_for_layout %>
+
+        </div>
+    
+        <div id="column3">
+            <!-- This is the content on the right of the page. -->
+        </div>
+        
+        <div class="clearfloats"><!-- clears floating divs --></div>
+
+    </div><!-- End contentarea -->
+
+    <!-- Page Footer -->
+    <div id="footer">
+        <div id="navBar">
+            | 
+            <% if self.controller.controller_name == 'home' %> 
+                home 
+            <% else %> 
+                <%= link_to_unless_current 'home', { :controller => '', :action => nil } %> 
+            <% end %> 
+            | 
+            <%= link_to_unless_current 'news', { :controller => 'news', :action => nil } %> 
+            | 
+            <%= link_to_unless_current 'products', { :controller => 'products', :action => nil } %> 
+            |
+            <%= link_to_unless_current 'about', { :controller => 'about', :action => nil } %> 
+            |
+        </div>
+    </div>
+
+<!-- XHTML Body Ends -->
+</body>
+</html>

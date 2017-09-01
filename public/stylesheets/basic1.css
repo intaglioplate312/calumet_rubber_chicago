@@ -1,0 +1,279 @@
+body {
+  color: black;
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px;
+  border-style: none;
+  font-family: 'Times', 'Times New Roman', serif;
+  font-size: 100%;
+  text-align: left;
+}
+
+a:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h2 {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.4em;
+  font-weight: normal;
+ }
+
+h3 {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: normal;
+ }
+
+h4 {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+ }
+
+h5 {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+p {
+  font-size: .82em;
+}
+
+div#header {
+  width: 700px;
+}
+
+div#contentarea {
+  width: 700px;
+  background-color: white;
+}
+
+div#column1 {
+  width: 100px;
+  height: 400px;
+  float: left;
+}
+
+div#column2 {
+  width: 500px;
+  float: left;
+}
+
+div#column3 {
+  width: 100px;
+  height: 0px;
+  float: left;
+}
+
+div.clearfloats {
+  clear: both;
+}
+
+div#footer {
+  width: 700px;
+}
+
+div#navBar {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: .76em;
+  color: gray;
+  margin: 0;
+  text-align: center;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#ErrorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#ErrorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#ErrorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#ErrorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.siteTitle {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 2em;
+  text-align: center;
+}
+
+div.notice p {
+  color: green;
+  background-color: white;
+}
+
+div.product th {
+  width: 90px; 
+  vertical-align: top;
+  text-align: right;
+  padding-right: 5px;
+}
+
+div.product td {
+  text-align: left;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+
+div#pageTitle {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+div#homeImage {
+  text-align: center;
+}
+div.name {
+  margin: 5px 0px;
+  text-align: center;
+}
+
+div.name p {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 0.82em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+div.address {
+  margin: 5px 0px;
+  text-align: center;
+}
+
+div.address p {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 0.82em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+div.phone {
+  margin: 5px 0px;
+  text-align: center;
+}
+div.phone p {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 0.82em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+div.newsTitle {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.4em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+div.newsTitle span.newsDate {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 0.52em;
+  font-weight: normal;
+  text-indent: 1.5em;
+  vertical-align: bottom;
+  color: gray;
+  background-color: white;
+}
+
+div.newsText {
+}
+
+div.aboutTitle {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+div.aboutTitle span.newsDate {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 0.52em;
+  font-weight: normal;
+  text-indent: 1.5em;
+  vertical-align: bottom;
+  color: gray;
+  background-color: white;
+}
+
+div.aboutText {
+}
+
+div.productTitle {
+  font-family:'Helvetica', 'Arial', sans-serif;
+  font-size: 1.4em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+

@@ -1,0 +1,55 @@
+<% # @pageTitle = 'About Us' %>
+
+<% for about_item in @about_items %>
+
+    <% textblock = RedCloth.new about_item.description %>
+    
+    <div class="about">
+        
+        <div class="aboutTitle">
+            <%=h about_item.title %>
+        </div>
+
+        <div class="aboutText">
+            <%= textblock.to_html %>
+        </div>
+
+        <% if about_item.email && about_item.email_label %>
+            <div class="aboutEmail">
+                <%= mail_to about_item.email, about_item.email_label, :encode => "javascript" %>
+            </div>
+        <% end %>
+        
+    </div>
+  
+<% end %>
+
+<% if @associates && !@associates.empty? %>
+  <br/>
+  <h2>Contact us</h2>
+  <table>
+    <% for associate in @associates %>
+      <tr>
+        <% fullname = associate.first_name   unless associate.first_name.nil?
+           fullname += ' '                   unless associate.middle_name.nil?
+           fullname += associate.middle_name unless associate.middle_name.nil?
+           fullname += ' '                   unless associate.last_name.nil?
+           fullname += associate.last_name   unless associate.last_name.nil?
+           fullname += ' '                   unless associate.suffix.nil?
+           fullname += associate.suffix      unless associate.suffix.nil?
+        %>
+        <td>
+          <% if associate.email %>
+            <%= mail_to associate.email, fullname, :encode => "javascript" %>
+          <% else %>
+            <%=h fullname %>
+          <% end %>
+        </td>
+        <td>
+          <%=h associate.phone %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<table><tr><th>For C-25 orders, please call 1-800-521-4886.</th></tr></table>

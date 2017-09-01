@@ -1,0 +1,17 @@
+#
+test:
+  adapter: postgresql
+  host: localhost
+  database: calumetrubber_test
+  username: calumetrubber_test
+  password: irr3ith8ek2gem2vot1iv9reb7ods5ar
+  encoding: UTF8
+
+production:
+  adapter: postgresql
+  host: localhost
+  database: calumetrubber_production
+  username: calumetrubber_production
+  password: glik6keaj6olv6urp5o5quen5pouv3hy
+  encoding: UTF8
+

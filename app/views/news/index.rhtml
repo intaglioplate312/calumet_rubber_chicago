@@ -1,0 +1,19 @@
+<% @pageTitle = 'News' %>
+
+<% for news_item in @news_items %>
+
+    <div class="newsTitle">
+        <%=h news_item.title %>
+
+        <% if news_item.start_date %>
+            <span class="newsDate">  
+                <%=h news_item.start_date %>
+            </span>
+        <% end %>
+    </div>
+
+    <div class="newsText">
+        <%= textilize news_item.description %>
+    </div>
+
+<% end %>

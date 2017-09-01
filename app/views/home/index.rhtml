@@ -1,0 +1,43 @@
+<% @pageTitle = 'Welcome' %>
+
+<% if @my_organization.image_file_name %>
+    <div id="homeImage">
+        <%= image_tag @my_organization.image_file_name, {:alt => @my_organization.image_file_name} %>
+    </div>
+<% end %>
+
+<div class="organization_info">
+
+    <% if my_address = Address.find(@my_organization.address_id, :include => :state) %>
+
+        <div class="name">
+            <p><%=h @my_organization.name %></p>
+        </div>
+
+        <div class="address">
+            <p><%=h my_address.address_line_1 %></p>
+
+            <% if my_address.address_line_2 %>
+                <p><%=h my_address_line_2 %></p>
+            <% end %>
+
+            <p><%= my_address.city + ', ' + my_address.state.state + ' ' + my_address.zip %></p>
+        </div>
+
+        <div class="phone">
+            <% if @my_organization.toll_free_phone %>
+                <p>Toll Free <%=h @my_organization.toll_free_phone %></p>
+            <% end %>
+
+            <% if @my_organization.phone %>
+                <p>Phone <%=h @my_organization.phone %></p>
+            <% end %>
+
+            <% if @my_organization.fax %>
+                <p>Fax <%=h @my_organization.fax %></p>
+            <% end %>
+        </div>
+
+    <% end %>
+
+</div>

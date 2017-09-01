@@ -1,0 +1,22 @@
+<% @pageTitle = 'Products' %>
+
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Name</th>
+        <th>Length</th>
+        <th>Hole Size</th>
+    </tr>
+  
+    <% for product in @products %>
+        
+        <tr>
+            <td><%= link_to product.product_number, :action => 'show', :id => product.id %></td>
+            <td><%=h product.name %></td>
+            <td><%=h product.length %></td>
+            <td><%=h product.hole_size %></td>
+        </tr>
+        
+    <% end %>
+
+</table>
