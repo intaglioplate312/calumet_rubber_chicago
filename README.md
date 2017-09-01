@@ -1,5 +1,5 @@
 # calumet_rubber_chicago
-Website redesign for Chicago based fabricator
+Website Chicago based fabricator
 
 == Welcome to Rails
 
